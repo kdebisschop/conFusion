@@ -7,15 +7,15 @@ export class PromotionService {
 
   constructor() { }
 
-  getPromotions(): Promotion[] {
+  static getPromotions(): Promotion[] {
     return PROMOTIONS;
+  }
+
+  static getFeaturedPromotion(): Promotion {
+    return PROMOTIONS.filter((promotion) => promotion.featured)[0];
   }
 
   getPromotion(id: number): Promotion {
     return PROMOTIONS.filter((promo) => (promo.id === id))[0];
-  }
-
-  getFeaturedPromotion(): Promotion {
-    return PROMOTIONS.filter((promotion) => promotion.featured)[0];
   }
 }

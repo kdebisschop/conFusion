@@ -1,4 +1,4 @@
-import { Comment } from "./comment";
+import { Comment } from './comment';
 
 export class Dish {
   id: number;
@@ -9,5 +9,5 @@ export class Dish {
   price: string;
   featured: boolean;
   description: string;
-  comments: Comment[]
+  comments: Comment[];
 }
