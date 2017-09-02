@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdCardModule, MdDialogModule, MdInputModule, MdListModule, MdToolbarModule } from '@angular/material'
+import { MdCardModule, MdCheckboxModule, MdDialogModule, MdInputModule, MdListModule, MdMenuModule, MdToolbarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
@@ -41,9 +41,11 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpModule,
     MdCardModule,
+    MdCheckboxModule,
     MdDialogModule,
     MdInputModule,
     MdListModule,
+    MdMenuModule,
     MdToolbarModule,
   ],
   entryComponents: [
