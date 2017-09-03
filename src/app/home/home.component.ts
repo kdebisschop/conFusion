@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
 import { DishService} from '../services/dish.service';
 import { Leader } from '../shared/leader';
-import { LeaderService } from '../services/leader';
+import { LeaderService } from '../services/leader.service';
 import { Promotion } from '../shared/promotion';
 import { PromotionService } from '../services/promotion.service';
 
@@ -22,9 +22,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    DishService.getFeaturedDish().then(dish => this.dish = dish);
-    PromotionService.getFeaturedPromotion().then(promotion => this.promotion = promotion);
-    LeaderService.getFeaturedLeader().then(leader => this.leader = leader);
+    DishService.getFeaturedDish().subscribe(dish => this.dish = dish);
+    PromotionService.getFeaturedPromotion().subscribe(promotion => this.promotion = promotion);
+    LeaderService.getFeaturedLeader().subscribe(leader => this.leader = leader);
   }
 
 }
