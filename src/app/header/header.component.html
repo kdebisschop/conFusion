@@ -1,12 +1,25 @@
-<md-toolbar color="primary" fxLayout="column">
+<md-toolbar color="primary">
   <span><img src="../../assets/images/logo.png" height=30 width=41></span>
-  <a md-button routerLinkActive="active" routerLink="home"><span class="fa fa-home"> Home</span></a>
-  <a md-button routerLinkActive="active" routerLink="about-us"><span class="fa fa-info"> About</span></a>
-  <a md-button routerLinkActive="active" routerLink="menu"><span class="fa fa-list"> Menu</span></a>
-  <a md-button routerLinkActive="active" routerLink="contact-us"><span class="fa fa-address-card"> Contact</span></a>
+  <!--<span class="fill-remaining-space"></span>-->
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button md-button routerLink="home">Home</button>
+    <button md-button routerLink="about-us">Abou</button>
+    <button md-button routerLink="menu">Menu</button>
+    <button md-button routerLink="contact-us">Contact</button>
+  </div>
+  <button md-button [md-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+    <md-icon>menu</md-icon>
+  </button>
   <span class="flex-spacer"></span>
-  <a md-button (click)="openLoginForm()"><span class="fa fa-sign-in"> Login</span></a>
+  <button md-button (click)="openLoginForm()"><span class="fa fa-sign-in"> Login</span></button>
 </md-toolbar>
+
+<md-menu x-position="before" #menu="mdMenu">
+  <button md-menu-item routerLink="home">Home</button>
+  <button md-menu-item routerLink="about-us">Abouy</button>
+  <button md-menu-item routerLink="menu">Menu</button>
+  <button md-menu-item routerLink="contact-us">Contact</button>
+</md-menu>
 
 <div class="container jumbotron"
      fxLayout="column"

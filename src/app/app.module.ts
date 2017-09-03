@@ -7,7 +7,7 @@ import {
   MdButtonModule,
   MdCardModule,
   MdCheckboxModule,
-  MdDialogModule,
+  MdDialogModule, MdIconModule,
   MdInputModule,
   MdListModule,
   MdMenuModule,
@@ -16,7 +16,7 @@ import {
   MdSelectModule,
   MdSlideToggleModule,
   MdToolbarModule
-} from '@angular/material';
+} from '@angular/material'
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
@@ -58,6 +58,7 @@ import { LoginComponent } from './login/login.component';
     MdCardModule,
     MdCheckboxModule,
     MdDialogModule,
+    MdIconModule,
     MdInputModule,
     MdListModule,
     MdMenuModule,
