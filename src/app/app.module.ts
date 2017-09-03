@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {
+  MdButtonModule,
   MdCardModule,
   MdCheckboxModule,
   MdDialogModule,
@@ -11,9 +12,11 @@ import {
   MdListModule,
   MdMenuModule,
   MdOptionModule,
+  MdProgressSpinnerModule,
   MdSelectModule,
   MdSlideToggleModule,
-  MdToolbarModule } from '@angular/material';
+  MdToolbarModule
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
@@ -51,12 +54,14 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    MdButtonModule,
     MdCardModule,
     MdCheckboxModule,
     MdDialogModule,
     MdInputModule,
     MdListModule,
     MdMenuModule,
+    MdProgressSpinnerModule,
     MdOptionModule,
     MdSelectModule,
     MdSlideToggleModule,

@@ -13,6 +13,12 @@ export class LeaderService {
     });
   }
 
+  static getFeaturedLeader(): Promise<Leader> {
+    return new Promise(resolve => {
+      setTimeout(() => resolve(LEADERS.filter((leader) => (leader.featured))[0]), 2000);
+    });
+  }
+
   getLeader(id: number): Promise<Leader> {
     return new Promise(resolve => {
       setTimeout(() => resolve(LEADERS.filter((leader) => (leader.id === id))[0]), 2000);
